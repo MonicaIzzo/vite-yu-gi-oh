@@ -1,16 +1,13 @@
 <script>
+import CharactersList from './components/CharactersList.vue';
 export default {
     name: 'Yu Gi Oh',
-    data() {
-        return {
-
-        }
-    }
-}
+    components: { CharactersList }
+};
 </script>
 
 <template>
-    <h1>Ciao</h1>
+    <CharactersList />
 </template>
 
 <style></style>
