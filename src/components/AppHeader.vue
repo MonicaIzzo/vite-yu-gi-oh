@@ -8,7 +8,10 @@ export default {
     // logica qui
     components: { BaseSelect },
     data() {
-        return store
+        return {
+            store,
+            types
+        }
     }
 
 };
@@ -19,8 +22,7 @@ export default {
 <template>
     <header>
         <div class="filter">
-            <BaseSelect defaultLabel="Tutti i tipi"
-                :options="['Bug', 'Dark', 'Dragon', 'Electric', 'Fairy', 'Fighting', 'Fire', 'Flying', 'Ghost', 'Grass', 'Ground', 'Ice', 'Normal', 'Poison', 'Psychic', 'Rock', 'Steel', 'Water']" />
+            <BaseSelect defaultLabel="Tutti i tipi" :options="types" />
         </div>
     </header>
 </template>
