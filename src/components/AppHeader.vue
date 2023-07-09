@@ -18,7 +18,7 @@ export default {
 <template>
     <header>
         <div class="filter">
-            <BaseSelect />
+            <BaseSelect defaultLabel="Tutti i tipi" />
         </div>
     </header>
 </template>
