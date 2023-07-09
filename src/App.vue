@@ -13,7 +13,14 @@ export default {
         filterPokemon(types) {
             console.log(types);
 
-        }
+        },
+
+        fetchTypes() {
+            axios.get(endpoint + '/types1')
+                .then(res => {
+                    store.types = res.data;
+                });
+        },
 
     },
 
@@ -22,6 +29,7 @@ export default {
             .then(res => {
                 store.characters = res.data.docs;
             });
+        this.fetchTypes();
     },
 };
 </script>

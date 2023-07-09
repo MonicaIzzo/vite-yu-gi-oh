@@ -1,17 +1,13 @@
 <script>
 import { store } from '../data/store'
 import BaseSelect from './BaseSelect.vue';
-import { types } from '../data';
 
 
 export default {
     // logica qui
     components: { BaseSelect },
     data() {
-        return {
-            store,
-            types
-        }
+        return { store }
     },
     emits: ['type-change'],
     methods: {
@@ -29,7 +25,8 @@ export default {
 <template>
     <header>
         <div class="filter">
-            <BaseSelect defaultLabel="Tutti i tipi" :options="types" @option-change="onTypeChange" />
+            <BaseSelect v-if="store.types.length" defaultLabel="Tutti i tipi" :options="store.types"
+                @option-change="onTypeChange" />
         </div>
     </header>
 </template>
