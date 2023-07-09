@@ -18,7 +18,6 @@ export default {
             console.log(uri);
             endpoint = uri;
             console.log(endpoint);
-
         },
 
         fetchTypes() {
@@ -27,7 +26,6 @@ export default {
                     store.types = res.data;
                 });
         },
-
     },
 
     created() {
