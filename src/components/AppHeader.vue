@@ -24,7 +24,7 @@ export default {
 
 <template>
     <header>
-        <div class="filter">
+        <div class="filter text-center mt-5">
             <BaseSelect v-if="store.types.length" defaultLabel="Tutti i tipi" :options="store.types"
                 @option-change="onTypeChange" />
         </div>
@@ -34,4 +34,5 @@ export default {
 
 
 
-<style lang=" scss" scoped></style>
+<style lang=" scss" scoped>
+</style>
