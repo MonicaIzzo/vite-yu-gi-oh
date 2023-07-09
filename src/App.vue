@@ -1,13 +1,14 @@
 <script>
 import axios from 'axios';
 const endpoint = 'https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons';
+
 import { store } from './data/store.js'
 import CharactersList from './components/CharactersList.vue';
-import SearchForm from './components/SearchForm.vue';
+import AppHeader from './components/AppHeader.vue';
 
 export default {
     name: 'Pokemon',
-    components: { CharactersList, SearchForm },
+    components: { CharactersList, AppHeader },
 
     created() {
         axios.get(endpoint)
@@ -19,7 +20,9 @@ export default {
 </script>
 
 <template>
-    <SearchForm />
+    <!--Header con filto ricerca -->
+    <AppHeader />
+    <!--Card Pokemon -->
     <CharactersList />
 </template>
 

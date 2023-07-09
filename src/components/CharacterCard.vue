@@ -20,6 +20,8 @@ export default {
 
 <template>
     <div class="character-card" :style="`background-color: ${bgColor}`">
+        <!-- era concettualmente più corretto come in lezione
+        aveva suggerito un mio collega, il colore dovevo andarlo a prendere nell'API e settare con quella una classe -->
         <div class="images">
             <img :src="imageUrl" :alt="name" :title="name">
         </div>
@@ -37,6 +39,7 @@ export default {
     background-color: aqua;
     padding: 1rem;
     height: 300px;
+    color: white;
 }
 
 .character-card .images {

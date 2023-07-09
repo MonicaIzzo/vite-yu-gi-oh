@@ -16,7 +16,31 @@ const colorMap = {
     "Psychic" : '#98d7a5',
     "Rock" : '#eaeda1',
     "Steel" : '#gray',
-    "Water" : '#DEF3FD',
+    "Water" : 'Blue',
 }
 
+
+const types = [
+  "Bug",
+  "Dark",
+  "Dragon",
+  "Electric",
+  "Fairy",
+  "Fighting",
+  "Fire",
+  "Flying",
+  "Ghost",
+  "Grass",
+  "Ground",
+  "Ice",
+  "Normal",
+  "Poison",
+  "Psychic",
+  "Rock",
+  "Steel",
+  "Water"
+]
+
+
 export { colorMap };
+export { types };
