@@ -15,13 +15,16 @@ export default {
 </script>
 
 
+
 <template>
     <header>
         <div class="filter">
-            <BaseSelect defaultLabel="Tutti i tipi" />
+            <BaseSelect defaultLabel="Tutti i tipi" :options="['1', '2', '3']" />
         </div>
     </header>
 </template>
 
 
-<style lang="scss" scoped></style>
+
+
+<style lang=" scss" scoped></style>

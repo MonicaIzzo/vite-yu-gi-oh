@@ -1,6 +1,7 @@
 <script>
 export default {
     props: {
+        options: Array,
         defaultLabel: String
     }
 
@@ -10,7 +11,7 @@ export default {
 <template>
     <select>
         <option value="">{{ defaultLabel || '---' }}</option>
-        <option>opzione 1</option>
+        <option v-for="option in options" :key="option">{{ option }}</option>
     </select>
 </template>
 
