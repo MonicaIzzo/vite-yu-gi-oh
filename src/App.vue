@@ -21,4 +21,4 @@ export default {
     <CharactersList />
 </template>
 
-<style></style>
+<style ></style>

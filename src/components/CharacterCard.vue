@@ -24,8 +24,8 @@ export default {
     </div>
 </template>
 
-<style scoped>
-.character-card {
+<style lang="scss" scoped>
+>.character-card {
     background-color: aqua;
     padding: 1rem;
     height: 300px;

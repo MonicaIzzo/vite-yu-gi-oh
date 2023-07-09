@@ -7,4 +7,4 @@ $red: #FF0000;
 // buona pratica è inserire tutte le varibili custom in un file "_custom.css" e importare qui con: @import './custom';
 
 // per persolizzare BOOTSTRAP a mio piacimento (va messo sempre in basso (dopo)
-@import './boostrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
