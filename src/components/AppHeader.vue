@@ -1,20 +1,31 @@
 <script>
+import { store } from '../data/store'
+import BaseSelect from './BaseSelect.vue';
 import { types } from '../data';
+
+
 export default {
     // logica qui
-    props: {
-        defaultLabel: String,
-        options: Array
+    components: { BaseSelect },
+    data() {
+        return {
+            store,
+            types
+        }
     }
+
 };
 </script>
 
 
 <template>
-    <select name="" id="">
-        <option value="">{{ defaultLabel || '--' }}</option>
-        <option v-for="option in options" :key="option">Opzion3 1</option>
-    </select>
+    <header>
+        <div class="filter">
+            <BaseSelect defaultLabel="Tutti i tipi"
+                :options='[
+                    "Bug", "Dark", "Dragon", "Electric", "Fairy", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Normal", "Poison", "Psychic", "Rock", "Steel", "Water"]' />
+        </div>
+    </header>
 </template>
 
 

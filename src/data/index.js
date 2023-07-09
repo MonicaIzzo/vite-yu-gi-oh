@@ -42,5 +42,4 @@ const types = [
 ]
 
 
-export { colorMap };
-export { types };
+export { colorMap, types};
