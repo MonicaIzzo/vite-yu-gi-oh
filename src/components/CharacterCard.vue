@@ -1,24 +1,32 @@
 <script>
+import { computed } from 'vue';
+import { colorMap } from '/src/data';
+
 export default {
     props: {
         name: String,
         imageUrl: String,
         number: Number,
         type1: String
+    },
+    computed: {
+        bgColor() {
+            return colorMap[this.type1];
+        }
     }
 };
 </script>
 
 
 <template>
-    <div class="character-card">
+    <div class="character-card" :style="`background-color: ${bgColor}`">
         <div class="images">
-            <img :src="imageUrl" :alt="name">
+            <img :src="imageUrl" :alt="name" :title="name">
         </div>
 
         <p class="number">{{ number }}</p>
         <h5 class="name">{{ name }}</h5>
-        <p class="type1">{{ type1 }}</p>
+        <p class="type1"><em>{{ type1 }}</em></p>
 
 
     </div>

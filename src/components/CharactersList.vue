@@ -1,6 +1,6 @@
 <script>
-import CharacterCard from './CharacterCard.vue';
 import { store } from '../data/store'
+import CharacterCard from './CharacterCard.vue';
 export default {
     components: { CharacterCard },
     data() {

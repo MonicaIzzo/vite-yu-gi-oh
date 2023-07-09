@@ -6,7 +6,7 @@ import CharactersList from './components/CharactersList.vue';
 import SearchForm from './components/SearchForm.vue';
 
 export default {
-    name: 'Yu Gi Oh',
+    name: 'Pokemon',
     components: { CharactersList, SearchForm },
 
     created() {
@@ -23,4 +23,4 @@ export default {
     <CharactersList />
 </template>
 
-<style ></style>
+<style lang="scss"></style>
