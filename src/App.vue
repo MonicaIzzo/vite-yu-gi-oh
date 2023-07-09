@@ -9,19 +9,26 @@ import AppHeader from './components/AppHeader.vue';
 export default {
     name: 'Pokemon',
     components: { CharactersList, AppHeader },
+    methods: {
+        filterPokemon(types) {
+            console.log(types);
+
+        }
+
+    },
 
     created() {
         axios.get(endpoint)
             .then(res => {
                 store.characters = res.data.docs;
             });
-    }
+    },
 };
 </script>
 
 <template>
     <!--Header con filto ricerca -->
-    <AppHeader />
+    <AppHeader @type-change="filterPokemon" />
     <!--Card Pokemon -->
     <CharactersList />
 </template>

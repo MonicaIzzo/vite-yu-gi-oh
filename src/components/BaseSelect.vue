@@ -7,14 +7,16 @@ export default {
     },
     props: {
         options: Array,
-        defaultLabel: String
-    }
+        defaultLabel: String,
+        initialValue: String,
+    },
+    emits: ['option-change'],
 
 };
 </script>
 
 <template>
-    <select v-model="selectedOption">
+    <select v-model="selectedOption" @change="$emit('option-change', selectedOption)">
         <option value="">{{ defaultLabel || '---' }}</option>
         <option v-for="option in options" :key="option">{{ option }}</option>
     </select>

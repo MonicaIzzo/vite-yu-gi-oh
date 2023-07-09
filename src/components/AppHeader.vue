@@ -12,6 +12,13 @@ export default {
             store,
             types
         }
+    },
+    emits: ['type-change'],
+    methods: {
+        onTypeChange(types) {
+            this.$emit('type-change', types);
+
+        }
     }
 
 };
@@ -22,7 +29,7 @@ export default {
 <template>
     <header>
         <div class="filter">
-            <BaseSelect defaultLabel="Tutti i tipi" :options="types" />
+            <BaseSelect defaultLabel="Tutti i tipi" :options="types" @option-change="onTypeChange" />
         </div>
     </header>
 </template>
