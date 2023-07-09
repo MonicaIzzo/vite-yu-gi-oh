@@ -25,7 +25,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
->.character-card {
+.character-card {
     background-color: aqua;
     padding: 1rem;
     height: 300px;
