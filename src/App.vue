@@ -6,6 +6,7 @@ import { store } from './data/store.js'
 import CharactersList from './components/CharactersList.vue';
 import AppHeader from './components/AppHeader.vue';
 
+
 export default {
     name: 'Pokemon',
     components: { CharactersList, AppHeader },
@@ -18,6 +19,10 @@ export default {
             console.log(uri);
             endpoint = uri;
             console.log(endpoint);
+            axios.get(endpoint)
+                .then(res => {
+                    store.characters = res.data.docs;
+                });
         },
 
         fetchTypes() {
