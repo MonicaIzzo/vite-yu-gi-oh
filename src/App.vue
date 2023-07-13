@@ -17,9 +17,7 @@ export default {
         filterPokemon(types) {
             const uri = endpoint + `?eq[type1]=${types}`;
             console.log(uri);
-            endpoint = uri;
-            console.log(endpoint);
-            axios.get(endpoint)
+            axios.get(uri)
                 .then(res => {
                     store.characters = res.data.docs;
                 });
